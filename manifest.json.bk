@@ -1,0 +1,59 @@
+{
+	"manifest_version": 2,
+	"name": "crcc plugin",
+	"version": "1.0.0",
+	"description": "crcc extensions",
+	"icons": {
+		"16": "app/static/img/icon.png",
+		"48": "app/static/img/icon.png",
+		"128": "app/static/img/icon.png"
+	},
+	"background": {
+		"scripts": [
+			"app/js/background.js"
+		]
+	},
+	"browser_action": {
+		"default_title": "crcc plugin",
+		"default_icon": "app/static/img/icon.png",
+		"default_popup": "app/popup.html"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"http://aqgl.crcc.cn/*"
+			],
+			"js": [
+//				"app/static/js/jquery-3.3.1.min.js",
+				"app/static/js/handlebars-v4.0.11.js",
+				"app/static/js/hbsTpl.js",
+				"app/js/content_scripts.js"
+			],
+			"css": [
+				"app/css/home.css"
+			],
+			"run_at": "document_end"
+		}
+	],
+	"permissions": [
+		"contextMenus",
+		"tabs",
+		"notifications",
+		"webRequest",
+		"webRequestBlocking",
+		"storage",
+		"http://*/*",
+		"https://*/*"
+	],
+	"web_accessible_resources": [
+		"app/js/inject.js"
+	],
+	"homepage_url": "http://crcc.mcourse.cc",
+	"chrome_url_overrides": {
+		"newtab": "app/newtab.html"
+	},
+	"omnibox": {
+		"keyword": "go"
+	},
+	"devtools_page": "app/devtools.html"
+}
