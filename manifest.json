@@ -15,8 +15,7 @@
 	},
 	"browser_action": {
 		"default_title": "crcc plugin",
-		"default_icon": "app/static/img/icon.png",
-		"default_popup": "app/popup.html"
+		"default_icon": "app/static/img/icon.png"
 	},
 	"content_scripts": [
 		{
