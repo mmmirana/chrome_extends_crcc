@@ -22,3 +22,7 @@ div#tips {
 .margin-tb-5 {
     margin: 5px 0 !important;
 }
+
+.ext-el-mask {
+    z-index: 900 !important;
+}

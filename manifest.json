@@ -24,14 +24,9 @@
 			],
 			"js": [
 				"app/static/js/jquery-3.3.1.min.js",
-				"app/static/js/handlebars-v4.0.11.js",
-				"app/static/js/hbsTpl.js",
-				"app/static/js/draggabilly.pkgd.min.js",
-				"app/static/plugin/mdui/mdui.min.js",
 				"app/js/content_scripts.js"
 			],
 			"css": [
-				"app/static/plugin/mdui/mdui.min.css",
 				"app/css/home.css"
 			],
 			"run_at": "document_end"
