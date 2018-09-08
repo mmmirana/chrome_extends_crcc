@@ -1,8 +1,4 @@
-p {
-    color: midnightblue;
-}
-
-div#plugin_pop {
+div#cp_pop {
     z-index: 10000;
     position: fixed;
     right: 50px;
@@ -12,17 +8,4 @@ div#plugin_pop {
     min-height: 150px;
     border: 1px solid lightskyblue;
     background: aliceblue;
-}
-
-div#tips {
-    font-size: 10px;
-    color: darkorchid;
-}
-
-.margin-tb-5 {
-    margin: 5px 0 !important;
-}
-
-.ext-el-mask {
-    z-index: 900 !important;
 }
