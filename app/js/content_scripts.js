@@ -137,9 +137,6 @@ function renderSubmit() {
                 <button class="mdui-btn mdui-btn-dense mdui-btn-block mdui-color-grey mdui-ripple margin-tb-5" onclick="plugin_logout()">
                     一键注销
                 </button>
-                <button class="mdui-btn mdui-btn-dense mdui-btn-block mdui-color-grey mdui-ripple margin-tb-5" onclick="stopGenerate()">
-                    终止生成数据
-                </button>
             </div>
             <div id="tips"></div>
             <!-- 自定义弹出框 -->
