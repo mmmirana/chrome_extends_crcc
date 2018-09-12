@@ -4,7 +4,7 @@ let loginUrlArr = ['http://aqgl.crcc.cn/login.do?reqCode=init',
 
 let cfg = {
     crcctitle: "某铁辅助插件",
-    crccBaseUrl: "http://127.0.0.1:3100",
+    crccBaseUrl: "http://crcc.mcourse.cc",
 };
 
 $().ready(function () {
