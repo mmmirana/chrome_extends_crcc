@@ -3,34 +3,17 @@ let loginUrlArr = ['http://aqgl.crcc.cn/login.do?reqCode=init',
     'http://aqgl.crcc.cn/login.do?reqCode=logout'];
 
 let cfg = {
-    crcctitle: "中铁辅助插件",
+    crcctitle: "某铁辅助插件",
     crccBaseUrl: "http://127.0.0.1:3100",
-    // cp_genGroupNum: 10,// 生成数据组数限制
-    // cp_pagesize: 20,// 每组提交20条记录
-    // cp_totalpage: 1,// 每次提交25组
-    // cp_tipsLength: 10,// 消息堆栈长度
-    // solution: ["立即将存在的隐患问题进行处理，确保施工生产正常进行。", "及时将发现的隐患问题进行整改，以减少安全事故的发生。"],// 解决方案
 };
-// // 隐患级别--- 1 一般隐患；2 重大隐患
-// cfg.dangerlevel = [1, 2];
-// // 危机人数分类--- 1 1-2人；2 3-9人；3：10-29人 4：30人以上
-// cfg.peoplecount = [1, 2, 3, 4];
-// // 天气因素-- ['1', '风']['2', '雨']['3', '干燥']['4', '雷电']['5', '冻融']['8', '雾霾']['9', '冰雪']['10', '高温']['13', '其他']['14', '正常']
-// cfg.weatherid = [1, 2, 3, 4, 5, 8, 9, 10, 13, 14];
-// // 因素分类--- ['1', '人']['2', '物']['3', '管理']['4', '机械']['5', '环境']
-// cfg.belongsort = [1, 2, 3, 4, 5];
-// // 施工现场--- ['1', '营区']['2', '施工现场']['3', '其它']
-// cfg.place = [1, 2, 3];
-// // 高新技术--- ['1', '无']['2', '新技术']['3', '新工艺']['4', '新材料']['5', '新设备']
-// cfg.fntech = [1, 2, 3, 4, 5];
-// // 路内路外--- ['1', '路内']['2', '路外']
-// cfg.inoutroad = [1, 2];
-
 
 $().ready(function () {
     initPage();
 });
 
+/**
+ * 初始化页面
+ */
 function initPage() {
     // 当前页面的url
     let currentUrl = window.location.href;
@@ -55,12 +38,12 @@ function renderPluginJS() {
                 crccBaseUrl: '${cfg.crccBaseUrl}'
             }
         </script>
-        <link rel="stylesheet" href="${cfg.crccBaseUrl}/web/static/crcc/plugin_crcc.css">
         <link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.1/css/mdui.min.css">
         <script src="//cdnjs.loli.net/ajax/libs/mdui/0.4.1/js/mdui.min.js"></script>
         <script src="${cfg.crccBaseUrl}/web/static/js/dateutils.js"></script>
         <script src="${cfg.crccBaseUrl}/web/static/js/storageutils.js"></script>
         <script src="${cfg.crccBaseUrl}/web/static/js/draggabilly.pkgd.min.js"></script>
+        <link rel="stylesheet" href="${cfg.crccBaseUrl}/web/static/crcc/plugin_crcc.css">
         <script src="${cfg.crccBaseUrl}/web/static/crcc/plugin_common.js" async></script>
         `);
     return $plugin_js;
@@ -126,8 +109,8 @@ function renderSubmit() {
                 <button class="mdui-btn mdui-btn-dense mdui-btn-block mdui-color-red mdui-ripple margin-tb-5" onclick="testCrccAgent()">
                     确定服务器运行状态
                 </button>
-                <button class="mdui-btn mdui-btn-dense mdui-btn-block mdui-color-blue mdui-ripple margin-tb-5" onclick="syncYinhuanNodes()">
-                    同步隐患节点数据
+                <button class="mdui-btn mdui-btn-dense mdui-btn-block mdui-color-blue mdui-ripple margin-tb-5" onclick="initCrccDataOnekey()">
+                    一键初始化数据
                 </button>
                 <button class="mdui-btn mdui-btn-dense mdui-btn-block mdui-color-green mdui-ripple margin-tb-5" onclick="submitDataOneKey()">
                     <i class="mdui-icon material-icons">check</i>一键填报隐患
