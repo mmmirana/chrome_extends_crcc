@@ -65,7 +65,7 @@ function renderLogin() {
                 </button>
                 <div class="mdui-textfield">
                     <label class="mdui-textfield-label">授权邮箱</label>
-                    <input class="mdui-textfield-input" type="text" id="email" value="18166748035@163.com" placeholder="18166748035@163.com"/>
+                    <input class="mdui-textfield-input" type="text" id="cp_email" value="" placeholder="请输入您的授权邮箱"/>
                 </div>
                 <button class="mdui-btn mdui-btn-dense mdui-btn-block mdui-color-green mdui-ripple margin-tb-5" onclick="loginOnekey()">
                     一键登录
