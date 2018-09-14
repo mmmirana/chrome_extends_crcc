@@ -113,12 +113,14 @@ function renderSubmit() {
                 <button class="mdui-btn mdui-btn-dense mdui-btn-block mdui-color-red mdui-ripple margin-tb-5" onclick="testCrccAgent()">
                     确定服务器运行状态
                 </button>
-                <button class="mdui-btn mdui-btn-dense mdui-btn-block mdui-color-blue mdui-ripple margin-tb-5" onclick="syncCrccDataOnekey()">
-                    一键同步数据
-                </button>
-                <button class="mdui-btn mdui-btn-dense mdui-btn-block mdui-color-blue mdui-ripple margin-tb-5" onclick="initCrccDataOnekey()">
-                    一键初始化数据
-                </button>
+                <div id="initDiv">
+                    <button class="mdui-btn mdui-btn-dense mdui-btn-block mdui-color-blue mdui-ripple margin-tb-5" onclick="syncCrccDataOnekey()">
+                        一键同步数据
+                    </button>
+                    <button class="mdui-btn mdui-btn-dense mdui-btn-block mdui-color-blue mdui-ripple margin-tb-5" onclick="initCrccDataOnekey()">
+                        一键初始化数据
+                    </button>
+                </div>
                 <button class="mdui-btn mdui-btn-dense mdui-btn-block mdui-color-green mdui-ripple margin-tb-5" onclick="submitDataOneKey()">
                     <i class="mdui-icon material-icons">check</i>一键填报隐患
                 <button class="mdui-btn mdui-btn-dense mdui-btn-block mdui-color-purple mdui-ripple margin-tb-5" onclick="deldangerOnekey()">
