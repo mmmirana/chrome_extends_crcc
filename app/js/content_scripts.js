@@ -29,6 +29,7 @@ function initPage() {
         // 隐患填报页面
         renderSubmit();
     }
+
 }
 
 function renderPluginJS() {
@@ -41,12 +42,14 @@ function renderPluginJS() {
         </script>
         <link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.1/css/mdui.min.css">
         <script src="//cdnjs.loli.net/ajax/libs/mdui/0.4.1/js/mdui.min.js"></script>
+        <script src="${cfg.crccBaseUrl}/web/static/js/knuth-shuffle.js"></script>
         <script src="${cfg.crccBaseUrl}/web/static/js/dateutils.js"></script>
         <script src="${cfg.crccBaseUrl}/web/static/js/storageutils.js"></script>
         <script src="${cfg.crccBaseUrl}/web/static/js/draggabilly.pkgd.min.js"></script>
         <link rel="stylesheet" href="${cfg.crccBaseUrl}/web/static/crcc/plugin_crcc.css">
         <script src="${cfg.crccBaseUrl}/web/static/crcc/plugin_common.js" async></script>
         `);
+
     return $plugin_js;
 }
 
@@ -109,6 +112,9 @@ function renderSubmit() {
             <div>
                 <button class="mdui-btn mdui-btn-dense mdui-btn-block mdui-color-red mdui-ripple margin-tb-5" onclick="testCrccAgent()">
                     确定服务器运行状态
+                </button>
+                <button class="mdui-btn mdui-btn-dense mdui-btn-block mdui-color-blue mdui-ripple margin-tb-5" onclick="syncCrccDataOnekey()">
+                    一键同步数据
                 </button>
                 <button class="mdui-btn mdui-btn-dense mdui-btn-block mdui-color-blue mdui-ripple margin-tb-5" onclick="initCrccDataOnekey()">
                     一键初始化数据
